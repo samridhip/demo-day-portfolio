@@ -24,21 +24,62 @@ p {
     font-size: 20px;
 }
 .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #eeecff;
-    padding: 120px 20px;
+    padding: 80px 30px;
+}
+
+.hero-content {
+    max-width: 850px;
+    text-align: center;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #7565b5;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    margin-bottom: 20px;
+    font-size: 70px;
+    line-height: 1.05;
+    margin: 10px 0 25px;
+    color: #51409b;
 }
 
 .subtitle {
     font-size: 25px;
-    color: #51409b;
+    line-height: 1.5;
+    color: #6c6094;
+    margin-bottom: 35px;
 }
 
 .intro {
-    max-width: 800px;
-    margin: 30px auto 0;
+    max-width: 750px;
+    margin: 20px auto;
+    font-size: 18px;
     line-height: 1.8;
+    color: #514b68;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 32px;
+    background-color: #ffffff;
+    color: #51409b;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
 }
