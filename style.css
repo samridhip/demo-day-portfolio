@@ -11,25 +11,28 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: #f5f1f7;
     color: #29233d;
-    text-align: center;
 }
 
 section {
     padding: 100px 40px;
 }
 
-h1 {
-    font-size: 55px;
-    color: #51409b;
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
 }
 
 h2 {
-    font-size: 38px;
+    font-size: 42px;
     color: #51409b;
+    margin-bottom: 25px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 
@@ -46,24 +49,24 @@ p {
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 50px;
+    padding: 16px 50px;
 
-    background-color: rgba(255, 255, 255, 0.92);
-
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
 
     border-bottom: 1px solid #e8e2f2;
 }
 
 .nav-logo {
+    color: #51409b;
+    text-decoration: none;
     font-size: 20px;
     font-weight: 800;
-    color: #51409b;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav-links a {
@@ -71,27 +74,37 @@ p {
     text-decoration: none;
     font-weight: 700;
 
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
 .nav-links a:hover {
     color: #51409b;
-    transform: translateY(-2px);
 }
 
 
 /* =========================
-   HOME / HERO
+   HOME
 ========================= */
 
 .hero {
-    min-height: 90vh;
+    min-height: 88vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: #eeecff;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #ffffff 0,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            #ddd6ff 0,
+            transparent 30%
+        ),
+        #eeecff;
 
     padding: 80px 30px;
 }
@@ -99,33 +112,31 @@ p {
 .hero-content {
     max-width: 850px;
     text-align: center;
+
+    animation: fadeUp 0.8s ease;
 }
 
 .small-title {
     font-size: 14px;
-
     letter-spacing: 4px;
-
     font-weight: 800;
 
     color: #7565b5;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
-    font-size: 70px;
-
+    font-size: 72px;
     line-height: 1.05;
 
-    margin: 10px 0 25px;
-
     color: #51409b;
+
+    margin: 10px 0 25px;
 }
 
 .subtitle {
     font-size: 25px;
-
     line-height: 1.5;
 
     color: #6c6094;
@@ -139,7 +150,6 @@ p {
     margin: 20px auto;
 
     font-size: 18px;
-
     line-height: 1.8;
 
     color: #514b68;
@@ -147,54 +157,54 @@ p {
 
 
 /* =========================
-   BUTTON
+   BUTTONS
 ========================= */
 
-.hero-button {
+.hero-button,
+.project-button {
     display: inline-block;
 
-    margin-top: 30px;
-
-    padding: 15px 32px;
+    padding: 14px 28px;
 
     background-color: #ffffff;
-
     color: #51409b;
 
     text-decoration: none;
 
-    border-radius: 30px;
-
     font-weight: 800;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
 
-    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(81, 64, 155, 0.12);
+
+    transition: all 0.3s ease;
 }
 
-.hero-button:hover {
+.hero-button {
+    margin-top: 25px;
+}
+
+.hero-button:hover,
+.project-button:hover {
     transform: translateY(-4px);
 
-    box-shadow: 0 10px 20px rgba(81, 64, 155, 0.15);
+    box-shadow:
+        0 12px 25px rgba(81, 64, 155, 0.18);
 }
 
 
 /* =========================
-   SKILLS SECTION
+   SKILLS
 ========================= */
 
 .skills-section {
     background-color: #f8f6fb;
-
-    padding: 100px 40px;
 }
 
 .section-intro {
     max-width: 750px;
 
-    margin: 0 auto 25px;
-
-    line-height: 1.8;
+    margin: 0 auto 18px;
 
     color: #514b68;
 }
@@ -207,49 +217,52 @@ p {
 .skills-container {
     max-width: 1050px;
 
-    margin: 60px auto 0;
+    margin: 55px auto 0;
 
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 22px;
 }
 
 .skill-card {
     background-color: #ffffff;
 
-    min-height: 230px;
+    min-height: 200px;
 
     padding: 30px;
 
-    border-radius: 8px;
+    border-radius: 12px;
 
     border: 1px solid #e4def0;
 
     text-align: left;
 
-    box-shadow: 0 4px 12px rgba(81, 64, 155, 0.06);
+    box-shadow:
+        0 5px 15px rgba(81, 64, 155, 0.06);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
 
-    box-shadow: 0 12px 25px rgba(81, 64, 155, 0.12);
+    border-color: #cfc5ed;
+
+    box-shadow:
+        0 15px 30px rgba(81, 64, 155, 0.12);
 }
 
 .skill-card h3 {
-    font-size: 28px;
+    font-size: 27px;
 
     color: #51409b;
 
-    margin-top: 0;
-
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .skill-card p {
@@ -262,203 +275,85 @@ p {
 
 
 /* =========================
-   TECHNICAL LEARNING JOURNEY
+   JOURNEY
 ========================= */
 
-#journey {
+.journey-section {
     background-color: #ffffff;
-
-    padding: 110px 40px;
 }
 
 .journey-content {
-    max-width: 800px;
+    max-width: 750px;
 
-    margin: 40px auto 0;
+    margin: 0 auto;
 }
 
 .journey-content p {
-    font-size: 18px;
-
-    line-height: 1.8;
-
     color: #514b68;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 
 /* =========================
-   GROWTH GRID
-========================= */
-
-.growth-grid {
-    max-width: 950px;
-
-    margin: 60px auto 0;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.growth-item {
-    background-color: #f8f6fb;
-
-    padding: 30px 20px;
-
-    border: 1px solid #e4def0;
-
-    border-radius: 8px;
-
-    transition: 0.3s;
-}
-
-.growth-item:hover {
-    transform: translateY(-6px);
-
-    box-shadow: 0 10px 20px rgba(81, 64, 155, 0.1);
-}
-
-.growth-item span {
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    font-weight: 800;
-
-    color: #7565b5;
-}
-
-.growth-item h3 {
-    font-size: 30px;
-
-    color: #51409b;
-
-    margin: 12px 0;
-}
-
-.growth-item p {
-    font-size: 15px;
-
-    color: #514b68;
-
-    margin: 0;
-}
-
-
-/* =========================
-   PROJECT SHOWCASE
+   PROJECTS
 ========================= */
 
 .projects-section {
     background-color: #f8f6fb;
-
-    padding: 110px 40px;
 }
-
-.projects-section .section-intro {
-    max-width: 700px;
-
-    margin: 0 auto 70px;
-
-    line-height: 1.8;
-
-    color: #514b68;
-}
-
-
-/* Individual Project */
 
 .project-showcase {
     max-width: 1050px;
 
-    margin: 0 auto 70px;
+    margin: 65px auto;
 
     display: grid;
 
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 55px;
 
     align-items: center;
 
-    background-color: #ffffff;
-
-    padding: 35px;
-
-    border: 1px solid #e4def0;
-
-    border-radius: 18px;
-
-    box-shadow: 0 6px 20px rgba(81, 64, 155, 0.07);
-
     text-align: left;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
 }
-
-
-/* Reverse layout */
 
 .project-showcase.reverse {
-    grid-template-columns: 1.1fr 0.9fr;
+    direction: rtl;
 }
 
-
-/* =========================
-   PROJECT IMAGES
-========================= */
+.project-showcase.reverse .project-info {
+    direction: ltr;
+}
 
 .project-image {
-    width: 100%;
-
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 }
 
 .project-image img {
     width: 100%;
 
-    max-width: 430px;
+    max-width: 420px;
 
-    max-height: 300px;
+    max-height: 290px;
 
     object-fit: contain;
 
     border-radius: 12px;
 
-    border: 1px solid #e4def0;
+    box-shadow:
+        0 10px 25px rgba(81, 64, 155, 0.12);
 
-    box-shadow: 0 5px 15px rgba(81, 64, 155, 0.08);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
-
-
-/* Image hover */
 
 .project-image img:hover {
-    transform: scale(1.03);
-
-    box-shadow: 0 10px 25px rgba(81, 64, 155, 0.15);
-
-    cursor: pointer;
+    transform: scale(1.025);
 }
-
-
-/* =========================
-   PROJECT TEXT
-========================= */
 
 .project-info {
     max-width: 500px;
@@ -467,7 +362,7 @@ p {
 .project-number {
     font-size: 13px;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 
     font-weight: 800;
 
@@ -481,95 +376,101 @@ p {
 
     color: #51409b;
 
-    margin-top: 0;
-
     margin-bottom: 18px;
 }
 
-.project-info p:not(.project-number) {
-    font-size: 16px;
-
-    line-height: 1.8;
-
+.project-info p {
     color: #514b68;
-
-    margin-bottom: 18px;
 }
 
-
-/* Project hover */
-
-.project-showcase:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 14px 30px rgba(81, 64, 155, 0.12);
+.project-button {
+    margin-top: 12px;
 }
 
 
 /* =========================
-   PROJECT BUTTON
+   FUTURE
 ========================= */
 
-.project-button {
-    display: inline-block;
+.future-section {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #ffffff 0,
+            transparent 25%
+        ),
+        #eeecff;
+}
 
-    margin-top: 5px;
+.future-content {
+    max-width: 750px;
 
-    padding: 15px 28px;
+    margin: 0 auto;
+}
+
+.future-content p {
+    color: #514b68;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection-section {
+    background-color: #ffffff;
+}
+
+.reflection-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.reflection-content p {
+    color: #514b68;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 20px;
 
     background-color: #51409b;
 
     color: #ffffff;
-
-    text-decoration: none;
-
-    border-radius: 25px;
-
-    font-weight: 800;
-
-    transition: 0.3s;
 }
 
-.project-button:hover {
-    transform: translateY(-3px);
+footer p {
+    margin: 0;
 
-    box-shadow: 0 8px 18px rgba(81, 64, 155, 0.2);
+    font-size: 14px;
 }
 
 
 /* =========================
-   FUTURE GOALS
+   ANIMATION
 ========================= */
 
-#future {
-    background-color: #eeecff;
+@keyframes fadeUp {
 
-    padding: 110px 40px;
-}
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-.future-content {
-    max-width: 800px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-    margin: 40px auto;
-}
-
-.future-content p {
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    color: #514b68;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================
-   GENERAL HOVER EFFECTS
-========================= */
-
-a {
-    transition: 0.3s ease;
 }
 
 
@@ -580,11 +481,8 @@ a {
 @media (max-width: 800px) {
 
     section {
-        padding: 80px 20px;
+        padding: 75px 22px;
     }
-
-
-    /* Navigation */
 
     .navbar {
         padding: 15px 20px;
@@ -595,18 +493,11 @@ a {
     }
 
     .nav-links {
-        gap: 15px;
+        gap: 14px;
 
         flex-wrap: wrap;
 
         justify-content: center;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        padding: 70px 20px;
     }
 
     .hero h1 {
@@ -617,12 +508,9 @@ a {
         font-size: 21px;
     }
 
-    .intro {
-        font-size: 17px;
+    h2 {
+        font-size: 34px;
     }
-
-
-    /* Skills */
 
     .skills-container {
         grid-template-columns: 1fr;
@@ -632,82 +520,22 @@ a {
         min-height: auto;
     }
 
-
-    /* Journey */
-
-    .growth-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    /* Projects */
-
-    .projects-section {
-        padding: 80px 20px;
-    }
-
     .project-showcase,
     .project-showcase.reverse {
         grid-template-columns: 1fr;
 
         gap: 30px;
 
-        padding: 25px;
+        direction: ltr;
+    }
 
-        margin-bottom: 45px;
+    .project-showcase.reverse .project-info {
+        direction: ltr;
     }
 
     .project-image img {
-        max-width: 100%;
+        max-width: 90%;
 
-        max-height: 350px;
-    }
-
-    .project-info {
-        max-width: none;
-    }
-
-    .project-info h3 {
-        font-size: 27px;
-    }
-
-
-    /* Future */
-
-    #future {
-        padding: 80px 20px;
-    }
-
-}
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media (max-width: 500px) {
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    .nav-links {
-        font-size: 14px;
-    }
-
-    .growth-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-showcase {
-        padding: 20px;
-    }
-
-    .project-image img {
         max-height: 250px;
     }
 
