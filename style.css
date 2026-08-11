@@ -9,7 +9,6 @@ html {
 body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
-
     background-color: #f5f1f7;
     color: #29233d;
 }
@@ -114,7 +113,7 @@ p {
 
 
 /* =========================
-   HERO
+   HERO / HOME
 ========================= */
 
 .hero {
@@ -142,7 +141,6 @@ p {
 
 .hero-content {
     max-width: 850px;
-
     text-align: center;
 
     animation: fadeUp 0.9s ease;
@@ -150,9 +148,7 @@ p {
 
 .small-title {
     font-size: 14px;
-
     letter-spacing: 4px;
-
     font-weight: 800;
 
     color: #7565b5;
@@ -162,7 +158,6 @@ p {
 
 .hero h1 {
     font-size: 72px;
-
     line-height: 1.05;
 
     color: #51409b;
@@ -172,7 +167,6 @@ p {
 
 .subtitle {
     font-size: 24px;
-
     line-height: 1.5;
 
     color: #6c6094;
@@ -197,7 +191,6 @@ p {
     margin: 18px auto;
 
     font-size: 18px;
-
     line-height: 1.8;
 
     color: #514b68;
@@ -267,7 +260,7 @@ p {
 
 
 /* =========================
-   SKILLS
+   SKILLS / TOPICS
 ========================= */
 
 .skills-section {
@@ -345,7 +338,7 @@ p {
 
 
 /* =========================
-   JOURNEY
+   TECHNICAL JOURNEY
 ========================= */
 
 .journey-section {
@@ -364,6 +357,145 @@ p {
     color: #514b68;
 
     margin-bottom: 23px;
+}
+
+
+/* =========================
+   GROWTH JOURNEY
+========================= */
+
+.growth-container {
+    max-width: 1050px;
+
+    margin: 60px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.growth-step {
+    flex: 1;
+
+    max-width: 300px;
+
+    padding: 30px 25px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e4def0;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 18px rgba(81, 64, 155, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.growth-step:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 14px 28px rgba(81, 64, 155, 0.12);
+}
+
+.growth-number {
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #7565b5;
+
+    margin-bottom: 10px;
+}
+
+.growth-icon {
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+.growth-step h3 {
+    font-size: 23px;
+
+    color: #51409b;
+
+    margin-bottom: 10px;
+}
+
+.growth-step p {
+    font-size: 15px;
+
+    color: #514b68;
+
+    margin-bottom: 18px;
+}
+
+.growth-step span {
+    font-size: 13px;
+
+    font-weight: 800;
+
+    color: #7565b5;
+}
+
+
+/* Progress bars */
+
+.growth-bar {
+    width: 100%;
+
+    height: 8px;
+
+    background-color: #eeeaf5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+}
+
+.growth-fill {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background-color: #7565b5;
+}
+
+.growth-fill.start {
+    width: 15%;
+}
+
+.growth-fill.learning {
+    width: 65%;
+}
+
+.growth-fill.future {
+    width: 90%;
+}
+
+
+/* Arrow between growth cards */
+
+.growth-arrow {
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #7565b5;
 }
 
 
@@ -403,6 +535,7 @@ p {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 }
 
@@ -472,7 +605,7 @@ p {
 
 
 /* =========================
-   FUTURE
+   FUTURE GOALS
 ========================= */
 
 .future-section {
@@ -631,6 +764,28 @@ footer .footer-small {
     .skill-card {
         min-height: auto;
     }
+
+    /* Growth */
+
+    .growth-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .growth-step {
+        width: 100%;
+
+        max-width: 420px;
+
+        box-sizing: border-box;
+    }
+
+    .growth-arrow {
+        transform: rotate(90deg);
+    }
+
+    /* Projects */
 
     .project-showcase,
     .project-showcase.reverse {
