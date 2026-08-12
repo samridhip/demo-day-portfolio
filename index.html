@@ -1,831 +1,666 @@
-/* =========================
-   GENERAL
-========================= */
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-html {
-    scroll-behavior: smooth;
-}
+<head>
 
-* {
-    box-sizing: border-box;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    margin: 0;
-    font-family: "Nunito", sans-serif;
-    background-color: #f7f5fa;
-    color: #29243a;
-}
+    <title>My Tech Teen Launchpad Journey</title>
 
-section {
-    padding: 100px 40px;
-}
+    <!-- Nunito Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-h1,
-h2,
-h3,
-p {
-    margin-top: 0;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-h2 {
-    font-size: 44px;
-    line-height: 1.15;
-    color: #51409b;
-    margin-bottom: 20px;
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-p {
-    font-size: 17px;
-    line-height: 1.75;
-}
+</head>
 
 
-/* =========================
-   NAVIGATION
-========================= */
+<body id="home">
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-    padding: 17px 50px;
+    <nav class="navbar">
 
-    background-color: rgba(255, 255, 255, 0.94);
+        <a href="#home" class="nav-logo">
+            My Tech Journey
+        </a>
 
-    backdrop-filter: blur(12px);
+        <div class="nav-links">
 
-    border-bottom: 1px solid #e8e2f2;
-}
+            <a href="#skills">Skills</a>
+            <a href="#journey">Journey</a>
+            <a href="#projects">Projects</a>
+            <a href="#future">Future</a>
+            <a href="#reflection">Reflection</a>
 
-.nav-logo {
-    color: #51409b;
-    text-decoration: none;
+        </div>
 
-    font-size: 20px;
-    font-weight: 800;
+    </nav>
 
-    transition: 0.3s ease;
-}
 
-.nav-logo:hover {
-    opacity: 0.75;
-}
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
+    <!-- =========================
+         HOME / INTRODUCTION
+    ========================== -->
 
-.nav-links a {
-    position: relative;
+    <section class="hero">
 
-    color: #5e5870;
+        <div class="hero-content">
 
-    text-decoration: none;
+            <p class="small-title">
+                TECH TEEN LAUNCHPAD
+            </p>
 
-    font-size: 15px;
-    font-weight: 700;
+            <h1>
+                My Journey<br>
+                Into Technology
+            </h1>
 
-    transition: 0.3s ease;
-}
+            <p class="subtitle">
+                From starting with zero coding experience to building
+                websites, learning new tools, and creating real-world projects.
+            </p>
 
-.nav-links a::after {
-    content: "";
+            <div class="hero-line"></div>
 
-    position: absolute;
+            <p class="intro">
+                When I first started Tech Teen Launchpad, I had no
+                background in coding. HTML, CSS, Python, and GitHub
+                were all completely new to me.
+            </p>
 
-    left: 0;
-    bottom: -6px;
+            <p class="intro">
+                Throughout the program, I learned the fundamentals of
+                programming and web development. I learned how HTML
+                creates structure, how CSS brings a website to life,
+                and how Python can be used for logic and problem-solving.
+            </p>
 
-    width: 0;
-    height: 2px;
+            <p class="intro">
+                Through hands-on activities, Codedex, presentations,
+                and projects, I became more comfortable experimenting
+                with code, debugging, and trying again when something
+                did not work.
+            </p>
 
-    background-color: #51409b;
+            <p class="intro">
+                One of the biggest parts of my journey was helping build
+                the Local Skill Emergency Hotline. This project allowed
+                me to apply what I learned to something designed to
+                help a community.
+            </p>
 
-    transition: 0.3s ease;
-}
+            <a href="#skills" class="hero-button">
+                Explore My Journey ↓
+            </a>
 
-.nav-links a:hover {
-    color: #51409b;
-}
+        </div>
 
-.nav-links a:hover::after {
-    width: 100%;
-}
+    </section>
 
 
-/* =========================
-   HERO
-========================= */
 
-.hero {
-    min-height: 90vh;
+    <!-- =========================
+         TOPICS THAT STOOD OUT
+    ========================== -->
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    <section id="skills" class="skills-section">
 
-    padding: 90px 30px;
+        <div class="section-heading">
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            #ffffff 0%,
-            transparent 27%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            #ddd6ff 0%,
-            transparent 30%
-        ),
-        #eeecff;
-}
+            <p class="small-title">
+                WHAT STOOD OUT TO ME
+            </p>
 
-.hero-content {
-    width: 100%;
-    max-width: 850px;
+            <h2>
+                Topics & Tools I Learned
+            </h2>
 
-    text-align: center;
+            <p class="section-intro">
+                The topics that stood out to me most were HTML, CSS,
+                and Python because they introduced me to different
+                sides of technology. I also learned how tools such as
+                Figma, VS Code, GitHub, and Canva can support the
+                development process.
+            </p>
 
-    animation: fadeUp 0.8s ease;
-}
+        </div>
 
-.small-title {
-    margin-bottom: 15px;
 
-    color: #7565b5;
+        <div class="skills-container">
 
-    font-size: 13px;
-    font-weight: 800;
+            <div class="skill-card">
 
-    letter-spacing: 4px;
-}
+                <h3>HTML</h3>
 
-.hero h1 {
-    margin: 10px 0 25px;
+                <p>
+                    HTML stood out to me because it showed me how
+                    websites are structured. I learned how headings,
+                    paragraphs, links, images, buttons, and sections
+                    work together to create a webpage.
+                </p>
 
-    color: #51409b;
+            </div>
 
-    font-size: 72px;
-    line-height: 1.04;
-    font-weight: 800;
-}
 
-.subtitle {
-    max-width: 750px;
+            <div class="skill-card">
 
-    margin: 0 auto 28px;
+                <h3>CSS</h3>
 
-    color: #6b6290;
+                <p>
+                    CSS became one of my favorite topics because I could
+                    see an immediate difference when I changed colors,
+                    fonts, spacing, layouts, and other design elements.
+                </p>
 
-    font-size: 23px;
-    line-height: 1.5;
-}
+            </div>
 
-.hero-line {
-    width: 55px;
-    height: 4px;
 
-    margin: 0 auto 30px;
+            <div class="skill-card">
 
-    border-radius: 10px;
+                <h3>Python</h3>
 
-    background-color: #7565b5;
-}
+                <p>
+                    Python introduced me to programming logic and
+                    problem-solving. It taught me to break problems
+                    into smaller steps and understand that debugging
+                    is part of learning.
+                </p>
 
-.intro {
-    max-width: 750px;
+            </div>
 
-    margin: 17px auto;
 
-    color: #514b68;
+            <div class="skill-card">
 
-    font-size: 17px;
-    line-height: 1.8;
-}
+                <h3>Figma</h3>
 
+                <p>
+                    I learned how Figma can be used to plan and visualize
+                    digital designs before building them. It helped me
+                    think about layout, organization, and the appearance
+                    of a digital project.
+                </p>
 
-/* =========================
-   BUTTONS
-========================= */
+            </div>
 
-.hero-button,
-.project-button {
-    display: inline-block;
 
-    padding: 13px 27px;
+            <div class="skill-card">
 
-    border-radius: 30px;
+                <h3>VS Code</h3>
 
-    background-color: #ffffff;
+                <p>
+                    VS Code helped me become comfortable writing and
+                    organizing code and understanding how different
+                    files work together.
+                </p>
 
-    color: #51409b;
+            </div>
 
-    text-decoration: none;
 
-    font-size: 15px;
-    font-weight: 800;
+            <div class="skill-card">
 
-    box-shadow:
-        0 7px 20px rgba(81, 64, 155, 0.12);
+                <h3>GitHub</h3>
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
+                <p>
+                    GitHub taught me how projects can be stored,
+                    organized, managed, and shared online through
+                    repositories.
+                </p>
 
-.hero-button {
-    margin-top: 22px;
-}
+            </div>
 
-.hero-button:hover,
-.project-button:hover {
-    transform: translateY(-4px);
 
-    box-shadow:
-        0 13px 28px rgba(81, 64, 155, 0.18);
-}
+            <div class="skill-card">
 
+                <h3>Canva</h3>
 
-/* =========================
-   SECTION HEADING
-========================= */
+                <p>
+                    I use Canva to create presentations and visual
+                    materials, including projects for my nonprofit,
+                    MedYouCare. I plan to continue using it for
+                    future projects.
+                </p>
 
-.section-heading {
-    max-width: 800px;
+            </div>
 
-    margin: 0 auto 55px;
+        </div>
 
-    text-align: center;
-}
+    </section>
 
-.section-intro {
-    max-width: 730px;
 
-    margin: 0 auto;
 
-    color: #514b68;
-}
+    <!-- =========================
+         TECHNICAL LEARNING JOURNEY
+    ========================== -->
 
+    <section id="journey" class="journey-section">
 
-/* =========================
-   SKILLS
-========================= */
+        <div class="section-heading">
 
-.skills-section {
-    background-color: #f8f6fb;
-}
+            <p class="small-title">
+                MY GROWTH
+            </p>
 
-.skills-container {
-    max-width: 1050px;
+            <h2>
+                My Technical Learning Journey
+            </h2>
 
-    margin: 0 auto;
+            <p class="section-intro">
+                My journey started with zero coding experience.
+                As I practiced, I became more comfortable solving
+                problems, experimenting with code, and creating
+                projects of my own.
+            </p>
 
-    display: grid;
+        </div>
 
-    grid-template-columns: repeat(3, 1fr);
 
-    gap: 22px;
-}
+        <!-- GROWTH -->
 
-.skill-card {
-    padding: 30px;
+        <div class="growth-container">
 
-    min-height: 205px;
 
-    background-color: #ffffff;
+            <div class="growth-card">
 
-    border: 1px solid #e5dfef;
+                <p class="growth-label">
+                    THEN
+                </p>
 
-    border-radius: 16px;
+                <h3>
+                    Starting From Zero
+                </h3>
 
-    box-shadow:
-        0 6px 18px rgba(81, 64, 155, 0.05);
+                <p>
+                    I had no coding experience and had never built
+                    a website before.
+                </p>
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
+            </div>
 
-.skill-card:hover {
-    transform: translateY(-7px);
 
-    border-color: #cfc5ed;
+            <div class="growth-card highlight">
 
-    box-shadow:
-        0 15px 30px rgba(81, 64, 155, 0.11);
-}
+                <p class="growth-label">
+                    NOW
+                </p>
 
-.skill-card h3 {
-    margin-bottom: 13px;
+                <h3>
+                    Building & Learning
+                </h3>
 
-    color: #51409b;
+                <p>
+                    I can now create webpages, work with HTML and CSS,
+                    practice Python, and use GitHub for my projects.
+                </p>
 
-    font-size: 25px;
-}
+            </div>
 
-.skill-card p {
-    margin: 0;
 
-    color: #514b68;
+            <div class="growth-card">
 
-    font-size: 16px;
-    line-height: 1.65;
-}
+                <p class="growth-label">
+                    NEXT
+                </p>
 
+                <h3>
+                    Keep Exploring
+                </h3>
 
-/* =========================
-   TECHNICAL JOURNEY
-========================= */
+                <p>
+                    I want to keep building websites, exploring technology,
+                    and using what I learned for meaningful projects.
+                </p>
 
-.journey-section {
-    background-color: #ffffff;
-}
+            </div>
 
+        </div>
 
-/* =========================
-   GROWTH CARDS
-========================= */
 
-.growth-container {
-    max-width: 1050px;
+        <!-- JOURNEY STORY -->
 
-    margin: 50px auto 65px;
+        <div class="journey-content">
 
-    display: grid;
+            <p>
+                At first, learning how to code felt challenging because
+                there were so many new concepts and terms to understand.
+                I had to learn how files worked together and how to
+                find mistakes when something did not work.
+            </p>
 
-    grid-template-columns: repeat(3, 1fr);
+            <p>
+                As I progressed, I became more confident experimenting
+                with code. Building the Local Skill Emergency Hotline
+                was especially meaningful because I could apply what
+                I had learned to a real project.
+            </p>
 
-    gap: 24px;
-}
+            <p>
+                I still have a lot to learn, but I now feel much more
+                comfortable exploring technology and creating things
+                on my own.
+            </p>
 
-.growth-card {
-    padding: 38px 30px;
+        </div>
 
-    background-color: #ffffff;
+    </section>
 
-    border: 1px solid #e4deee;
 
-    border-radius: 20px;
 
-    text-align: center;
+    <!-- =========================
+         PROJECT SHOWCASE
+    ========================== -->
 
-    box-shadow:
-        0 8px 22px rgba(81, 64, 155, 0.06);
+    <section id="projects" class="projects-section">
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
+        <div class="section-heading">
 
-.growth-card:hover {
-    transform: translateY(-7px);
+            <p class="small-title">
+                WHAT I CREATED
+            </p>
 
-    box-shadow:
-        0 15px 30px rgba(81, 64, 155, 0.12);
-}
+            <h2>
+                Project Showcase
+            </h2>
 
-.growth-card.highlight {
-    background-color: #eeecff;
+            <p class="section-intro">
+                These projects gave me opportunities to research,
+                practice coding, design, and apply what I learned.
+            </p>
 
-    border: 2px solid #d7cff0;
+        </div>
 
-    transform: translateY(-8px);
-}
 
-.growth-card.highlight:hover {
-    transform: translateY(-13px);
-}
+        <!-- DANIEL EK -->
 
-.growth-label {
-    margin-bottom: 11px;
+        <div class="project-showcase">
 
-    color: #7565b5;
+            <div class="project-image">
 
-    font-size: 12px !important;
-    font-weight: 800;
+                <img
+                    src="1.png"
+                    alt="Daniel Ek project presentation"
+                >
 
-    letter-spacing: 3px;
-}
+            </div>
 
-.growth-card h3 {
-    margin-bottom: 14px;
+            <div class="project-info">
 
-    color: #51409b;
+                <p class="project-number">
+                    01 / RESEARCH & PRESENTATION
+                </p>
 
-    font-size: 25px;
-}
+                <h3>
+                    Daniel Ek
+                </h3>
 
-.growth-card p:not(.growth-label) {
-    margin: 0;
+                <p>
+                    I researched Daniel Ek, learned about his work
+                    in technology, and presented the information
+                    in an organized and engaging way.
+                </p>
 
-    color: #514b68;
+            </div>
 
-    font-size: 16px;
-    line-height: 1.65;
-}
+        </div>
 
-.journey-content {
-    max-width: 750px;
 
-    margin: 0 auto;
+        <!-- CODEDEX -->
 
-    text-align: center;
-}
+        <div class="project-showcase reverse">
 
-.journey-content p {
-    margin-bottom: 23px;
+            <div class="project-image">
 
-    color: #514b68;
-}
+                <img
+                    src="4.png"
+                    alt="Codedex coding project"
+                >
 
+            </div>
 
-/* =========================
-   PROJECTS
-========================= */
+            <div class="project-info">
 
-.projects-section {
-    background-color: #f8f6fb;
-}
+                <p class="project-number">
+                    02 / CODING & PRACTICE
+                </p>
 
-.project-showcase {
-    max-width: 1050px;
+                <h3>
+                    Codedex
+                </h3>
 
-    margin: 75px auto;
+                <p>
+                    Codedex gave me hands-on opportunities to practice
+                    programming and experiment with different concepts.
+                </p>
 
-    display: grid;
+                <p>
+                    I worked with Python and CSS while becoming more
+                    comfortable reading, writing, and debugging code.
+                </p>
 
-    grid-template-columns: 1fr 1fr;
+            </div>
 
-    gap: 60px;
+        </div>
 
-    align-items: center;
-}
 
-.project-showcase.reverse {
-    direction: rtl;
-}
+        <!-- LOCAL SKILL EMERGENCY HOTLINE -->
 
-.project-showcase.reverse .project-info {
-    direction: ltr;
-}
+        <div class="project-showcase">
 
-.project-image {
-    display: flex;
+            <div class="project-image">
 
-    align-items: center;
-    justify-content: center;
-}
+                <img
+                    src="2.png"
+                    alt="Local Skill Emergency Hotline app map"
+                >
 
-.project-image img {
-    display: block;
+            </div>
 
-    width: 100%;
-    max-width: 410px;
+            <div class="project-info">
 
-    max-height: 285px;
+                <p class="project-number">
+                    03 / FINAL PROJECT
+                </p>
 
-    padding: 8px;
+                <h3>
+                    Local Skill Emergency Hotline
+                </h3>
 
-    object-fit: contain;
+                <p>
+                    My largest project was the Local Skill Emergency
+                    Hotline, a community-based website where people
+                    can offer skills or request help.
+                </p>
 
-    background-color: #ffffff;
+                <p>
+                    This project allowed me to bring together what I
+                    learned about HTML, CSS, design, and website structure.
+                </p>
 
-    border: 1px solid #e6e0ef;
+                <a
+                    href="https://github.com/samridhip/local-skill-emergency-hotline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                >
+                    View on GitHub →
+                </a>
 
-    border-radius: 16px;
+            </div>
 
-    box-shadow:
-        0 10px 28px rgba(81, 64, 155, 0.10);
+        </div>
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
 
-.project-image img:hover {
-    transform: translateY(-5px);
+        <!-- APP PLANNING -->
 
-    box-shadow:
-        0 16px 32px rgba(81, 64, 155, 0.15);
-}
+        <div class="project-showcase reverse">
 
-.project-info {
-    max-width: 500px;
-}
+            <div class="project-image">
 
-.project-number {
-    margin-bottom: 11px;
+                <img
+                    src="3.png"
+                    alt="Local Skill Emergency Hotline planning"
+                >
 
-    color: #7565b5;
+            </div>
 
-    font-size: 12px;
+            <div class="project-info">
 
-    font-weight: 800;
+                <p class="project-number">
+                    04 / DESIGN & PLANNING
+                </p>
 
-    letter-spacing: 3px;
-}
+                <h3>
+                    App Planning
+                </h3>
 
-.project-info h3 {
-    margin-bottom: 17px;
+                <p>
+                    I planned the structure of the Local Skill Emergency
+                    Hotline before building it. Creating an app map helped
+                    me understand how the pages would connect and how
+                    users would navigate the website.
+                </p>
 
-    color: #51409b;
+            </div>
 
-    font-size: 32px;
+        </div>
 
-    line-height: 1.2;
-}
+    </section>
 
-.project-info p {
-    color: #514b68;
 
-    font-size: 17px;
-}
 
-.project-button {
-    margin-top: 8px;
-}
+    <!-- =========================
+         FUTURE GOALS
+    ========================== -->
 
+    <section id="future" class="future-section">
 
-/* =========================
-   FUTURE GOALS
-========================= */
+        <div class="section-heading">
 
-.future-section {
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            #ffffff 0%,
-            transparent 27%
-        ),
-        #eeecff;
-}
+            <p class="small-title">
+                WHAT COMES NEXT
+            </p>
 
-.future-content {
-    max-width: 750px;
+            <h2>
+                My Future Goals
+            </h2>
 
-    margin: 0 auto;
+        </div>
 
-    text-align: center;
-}
 
-.future-content p {
-    margin-bottom: 23px;
+        <div class="future-content">
 
-    color: #514b68;
-}
+            <p>
+                Tech Teen Launchpad gave me my first real experience
+                with coding and deepened my interest in technology.
+            </p>
 
+            <p>
+                One of my goals is to use what I have learned to create
+                a website for my nonprofit, MedYouCare. I also want to
+                continue using Canva to create visual materials for it.
+            </p>
 
-/* =========================
-   REFLECTION
-========================= */
+            <p>
+                In the future, I want to keep exploring both medicine
+                and technology. I have always been interested in medicine,
+                while this program gave me the opportunity to explore
+                coding and discover another field I enjoy.
+            </p>
 
-.reflection-section {
-    background-color: #ffffff;
-}
+            <p>
+                I plan to keep learning, building projects, and seeing
+                where these interests take me.
+            </p>
 
-.reflection-content {
-    max-width: 750px;
+        </div>
 
-    margin: 0 auto;
+    </section>
 
-    text-align: center;
-}
 
-.reflection-content p {
-    margin-bottom: 23px;
 
-    color: #514b68;
-}
+    <!-- =========================
+         REFLECTION
+    ========================== -->
 
+    <section id="reflection" class="reflection-section">
 
-/* =========================
-   BACK TO TOP
-========================= */
+        <div class="section-heading">
 
-.back-to-top {
-    padding: 55px 20px;
+            <p class="small-title">
+                REFLECTION
+            </p>
 
-    background-color: #ffffff;
+            <h2>
+                What I Used & Learned
+            </h2>
 
-    text-align: center;
-}
+        </div>
 
 
-/* =========================
-   FOOTER
-========================= */
+        <div class="reflection-content">
 
-footer {
-    padding: 35px 20px;
+            <p>
+                I used ChatGPT to help with CSS, website planning,
+                troubleshooting, and organizing ideas for my portfolio.
+            </p>
 
-    background-color: #51409b;
+            <p>
+                I still made the decisions about what I wanted my website
+                to look like and what I wanted to include. Using these
+                tools helped me understand the process and feel more
+                confident experimenting with my own ideas.
+            </p>
 
-    color: #ffffff;
+        </div>
 
-    text-align: center;
-}
+    </section>
 
-footer p {
-    margin: 0;
 
-    font-size: 14px;
-}
 
-footer .footer-small {
-    margin-top: 5px;
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
 
-    opacity: 0.75;
+    <div class="back-to-top">
 
-    font-size: 13px;
-}
+        <a href="#home" class="hero-button">
+            ↑ Back to Top
+        </a>
 
+    </div>
 
-/* =========================
-   ANIMATION
-========================= */
 
-@keyframes fadeUp {
 
-    from {
-        opacity: 0;
-        transform: translateY(22px);
-    }
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    <footer>
 
-}
+        <p>
+            Built during Tech Teen Launchpad
+        </p>
 
+        <p class="footer-small">
+            Learning • Creating • Growing
+        </p>
 
-/* =========================
-   MOBILE
-========================= */
+    </footer>
 
-@media (max-width: 850px) {
 
-    section {
-        padding: 80px 22px;
-    }
+</body>
 
-    /* Navigation */
-
-    .navbar {
-        padding: 15px 20px;
-
-        flex-direction: column;
-
-        gap: 12px;
-    }
-
-    .nav-links {
-        gap: 15px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        min-height: auto;
-
-        padding: 90px 22px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-
-
-    /* Headings */
-
-    h2 {
-        font-size: 36px;
-    }
-
-
-    /* Skills */
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card {
-        min-height: auto;
-    }
-
-
-    /* Growth */
-
-    .growth-container {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-    .growth-card.highlight {
-        transform: none;
-    }
-
-    .growth-card.highlight:hover {
-        transform: translateY(-7px);
-    }
-
-
-    /* Projects */
-
-    .project-showcase,
-    .project-showcase.reverse {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
-        direction: ltr;
-    }
-
-    .project-showcase.reverse .project-info {
-        direction: ltr;
-    }
-
-    .project-image img {
-        width: 100%;
-
-        max-width: 430px;
-
-        max-height: 260px;
-    }
-
-    .project-info {
-        max-width: 600px;
-
-        margin: 0 auto;
-
-        text-align: center;
-    }
-
-    .project-info h3 {
-        font-size: 28px;
-    }
-
-}
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media (max-width: 500px) {
-
-    section {
-        padding: 70px 18px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .subtitle {
-        font-size: 18px;
-    }
-
-    .intro,
-    .future-content p,
-    .journey-content p,
-    .reflection-content p {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 31px;
-    }
-
-    .nav-links {
-        gap: 11px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    .project-image img {
-        max-height: 220px;
-    }
-
-}
+</html>
+```
